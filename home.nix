@@ -8,9 +8,67 @@
     ".notion/cfg_statusbar.lua".source = notion/cfg_statusbar.lua;
     ".notion/statusbar_wsname.lua".source = notion/statusbar_wsname.lua;
     ".groovy/grapeConfig.xml".source = groovy/grapeConfig.xml;
+    ".Xresources".source = ./Xresources;
   };
 
   home.packages = with pkgs; [
+    ant
+    chromium
+    curl
+    dropbox
+    firefox
+    gnome3.gedit
+    git
+    gitAndTools.gitflow
+    gnome_mplayer
+    gnupg
+    gradle
+    graphviz
+    htop
+    inkscape
+    irssi
+    jbake
+    libnotify
+    libreoffice
+    lsof
+    lynx
+    mplayer
+    multimc
+    mysqlWorkbench
+    netbeans
+    nixops
+    nox
+    nix-repl
+    obnam
+    obs-studio
+    pidgin
+    psmisc
+    pwgen
+    python
+    python3
+    python35Packages.youtube-dl
+    python36Packages.xdot
+    screen
+
+    tdesktop
+    tmux
+    travis
+    tree
+    unzip
+    utillinux
+    vim
+    virtualbox
+    visualvm
+    vlc
+    xbindkeys
+    xfontsel
+    xorg.appres
+    xorg.xclock
+    xorg.xev
+    xorg.xmodmap
+    zip
+
+
     jetbrains.idea-community
   ];
 
