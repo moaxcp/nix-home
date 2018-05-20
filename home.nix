@@ -1,6 +1,7 @@
 {pkgs, ...}:
 
 {
+  nixpkgs.overlays = [ (import ./overlays/package-upgrades) ];
   home.file = {
     ".notion/cfg_notion.lua".source = notion/cfg_notion.lua;
     ".notion/cfg_notioncore.lua".source = notion/cfg_notioncore.lua;
@@ -9,13 +10,14 @@
     ".notion/statusbar_wsname.lua".source = notion/statusbar_wsname.lua;
     ".groovy/grapeConfig.xml".source = groovy/grapeConfig.xml;
     ".Xresources".source = ./Xresources;
+    ".nanorc".source = ./nanorc;
   };
 
   home.packages = with pkgs; [
     ant
     chromium
     curl
-    dropbox
+    dropbox-cli
     firefox
     gnome3.gedit
     git
@@ -24,6 +26,7 @@
     gnupg
     gradle
     graphviz
+    
     htop
     inkscape
     irssi
@@ -39,7 +42,6 @@
     nixops
     nox
     nix-repl
-    obnam
     obs-studio
     pidgin
     psmisc
@@ -48,8 +50,8 @@
     python3
     python35Packages.youtube-dl
     python36Packages.xdot
+    rxvt_unicode-with-plugins
     screen
-
     tdesktop
     tmux
     travis
@@ -60,12 +62,14 @@
     virtualbox
     visualvm
     vlc
+    wget
     xbindkeys
     xfontsel
     xorg.appres
     xorg.xclock
     xorg.xev
     xorg.xmodmap
+    xterm
     zip
 
 
